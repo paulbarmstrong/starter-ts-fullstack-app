@@ -3,7 +3,6 @@ import * as cdk from "aws-cdk-lib"
 import * as dynamodb from "aws-cdk-lib/aws-dynamodb"
 import * as lambda from "aws-cdk-lib/aws-lambda"
 import * as lambda_nodejs from "aws-cdk-lib/aws-lambda-nodejs"
-import * as iam from "aws-cdk-lib/aws-iam"
 import * as apigw from "aws-cdk-lib/aws-apigatewayv2"
 import * as apigwinteg from "aws-cdk-lib/aws-apigatewayv2-integrations"
 import { AssetWithBuild, StaticWebsite } from "@paulbarmstrong/cdk-static-website-from-asset"
@@ -22,7 +21,7 @@ export class GridStack extends cdk.Stack {
 		})
 
 		const httpApiFunction = new lambda_nodejs.NodejsFunction(this, "HttpApiFunction", {
-			runtime: lambda.Runtime.NODEJS_20_X,
+			runtime: lambda.Runtime.NODEJS_24_X,
 			entry: "../http-api/src/index.ts",
 		})
 		gridItemsTable.grantReadWriteData(httpApiFunction)
