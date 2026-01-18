@@ -3,8 +3,6 @@
 	"version": "1.0.0",
 	"license": "Unlicense",
 	"workspaces": [
-		"packages/@paulbarmstrong/cdk-managed-objects-bucket",
-		"packages/@paulbarmstrong/cdk-static-website-from-asset",
 		"packages/cdk",
 		"packages/common",
 		"packages/http-api",
