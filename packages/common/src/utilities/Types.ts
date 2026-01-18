@@ -1,5 +1,5 @@
 import * as z from "zod"
-import { dynamicWebappConfigZod, gridItemZod } from "./Zod"
+import { dynamicWebappConfigZod, gridItemZod } from "./Zod.js"
 
 export type Json = undefined | null | string | number | boolean | Array<Json> | JsonObject
 

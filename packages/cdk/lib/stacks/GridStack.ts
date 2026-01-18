@@ -54,8 +54,8 @@ export class GridStack extends cdk.Stack {
 		const websiteAsset = new AssetWithBuild(this, "WebsiteAsset", {
 			path: "../webapp",
 			build: (exec, outputDir) => {
-				exec("npx react-scripts build --color=always", {
-					env: { BUILD_PATH: outputDir },
+				exec("npm run build", {
+					env: { BUILD_PATH: outputDir }
 				})
 				exec(`rm -f ${outputDir}/config.json`)
 			},

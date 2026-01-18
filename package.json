@@ -11,6 +11,6 @@
 	"devDependencies": {
 		"typescript": "^5.9.3",
 		"tsx": "^4.21.0",
-		"@types/node": "^18"
+		"@types/node": "^22"
 	}
 }
